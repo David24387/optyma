@@ -28,6 +28,8 @@ jobs:
         run: npm install
       - name: Build widget
         run: npm run build
+      - name: Add live preview to Pages artifact
+        run: cp preview.html dist/preview.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
